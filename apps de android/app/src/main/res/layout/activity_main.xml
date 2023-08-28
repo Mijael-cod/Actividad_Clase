@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp"
+    tools:layout_editor_absoluteX="-19dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <!-- Text Views, Spinners, Buttons, etc. -->
+        <!-- Coloca aquí todos los elementos UI de tu layout -->
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Nombre del Alumno"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
+            <TextView
+                android:id="@+id/textViewEscuela"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Escuela"
+                app:layout_constraintTop_toBottomOf="@+id/editTextName"
+                tools:layout_editor_absoluteX="4dp" />
+
+            <Spinner
+                android:id="@+id/spinnerEscuela"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEscuela"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/textViewCarreras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Carreras"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerEscuela"
+                tools:layout_editor_absoluteX="17dp" />
+
+            <Spinner
+                android:id="@+id/spinnerCarrera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCarreras"
+                tools:layout_editor_absoluteX="1dp" />
+
+
+            <TextView
+                android:id="@+id/textViewGastosAdicionales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Gastos Adicionales"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerCarrera"
+                tools:layout_editor_absoluteX="17dp" />
+
+
+            <TextView
+                android:id="@+id/textViewCuotas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cuotas"
+                app:layout_constraintTop_toBottomOf="@+id/check_mediopasaje"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <Spinner
+                android:id="@+id/spinnerCuotas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCuotas"
+                tools:layout_editor_absoluteX="-1dp" />
+
+            <TextView
+                android:id="@+id/textViewCostoCarreraTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Costo Carrera"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerCuotas"
+                tools:layout_editor_absoluteX="-3dp" />
+
+            <TextView
+                android:id="@+id/textViewCostoCarrera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCostoCarreraTitle"
+                tools:layout_editor_absoluteX="-3dp" />
+            <TextView
+                android:id="@+id/textViewCostoCarreraSign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="S/."
+                app:layout_constraintTop_toBottomOf="@+id/textViewCostoCarreraTitle"
+                tools:layout_editor_absoluteX="-3dp" />
+
+            <TextView
+                android:id="@+id/textViewPensionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Pension"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCostoCarrera"
+                tools:layout_editor_absoluteX="14dp" />
+
+            <TextView
+                android:id="@+id/textViewPension"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="S/."
+                app:layout_constraintTop_toBottomOf="@+id/textViewPensionTitle"
+                tools:layout_editor_absoluteX="-3dp" />
+            <TextView
+                android:id="@+id/textViewPensionSign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="S/."
+                app:layout_constraintTop_toBottomOf="@+id/textViewPensionTitle"
+                tools:layout_editor_absoluteX="-3dp" />
+
+            <TextView
+                android:id="@+id/textViewGastosAdicionalesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Gastos Adicionales"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPension"
+                tools:layout_editor_absoluteX="14dp" />
+
+
+            <TextView
+                android:id="@+id/textViewGastosAdicionalesSign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="S/."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewGastosAdicionalesTitle" />
+
+            <TextView
+                android:id="@+id/textViewTotalTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Total Pagar"
+                app:layout_constraintTop_toBottomOf="@+id/textViewGastosAdicionalesSign"
+                tools:layout_editor_absoluteX="32dp" />
+
+            <TextView
+                android:id="@+id/textViewTotalSign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="S/."
+                app:layout_constraintTop_toBottomOf="@+id/textViewTotalTitle"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/textViewTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTotalTitle"
+                tools:layout_editor_absoluteX="-3dp" />
+
+            <Button
+                android:id="@+id/calcular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="60dp"
+                android:text="Calcular"
+                android:textColor="@color/white"
+                android:textColorLink="#673AB7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTotal" />
+
+            <Button
+                android:id="@+id/imprimir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="72dp"
+                android:text="Imprimir"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTotal" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="MATRICULA"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/check_biblioteca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="-8dp"
+                android:text="Carnet Biblioteca"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewGastosAdicionales" />
+
+            <CheckBox
+                android:id="@+id/check_mediopasaje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="-10dp"
+                android:text="Carnet Medio Pasaje"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check_biblioteca" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
